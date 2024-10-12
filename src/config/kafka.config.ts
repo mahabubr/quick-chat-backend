@@ -1,7 +1,8 @@
 import { Kafka, logLevel } from "kafkajs";
 
 export const kafka = new Kafka({
-  brokers: [process.env.KAFKA_BROKER],
+  clientId: "quick-chat",
+  brokers: ["localhost:9093"],
   logLevel: logLevel.ERROR,
 });
 
